@@ -1,14 +1,12 @@
 #! /bin/bash
 returnto=$(pwd)
-if [ -d lapatilla ]; then
-	rootdir="lapatilla/uploads"
-elif [ -d uploads ]; then
+if [ -d uploads ]; then
 	rootdir="uploads"
 else
 	echo "No uploads directory found"
 	exit 1
 fi
-echo "upload directory found in $rootdir"
+echo "upload directory found"
 DIRS=$(ls -1 $rootdir)
 for year in $DIRS; do
 	SUBDIRS=$(ls -1 $rootdir/$year)
